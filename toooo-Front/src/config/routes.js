@@ -2,7 +2,7 @@ import TodoPage from '../components/pages/Index'
 import LoginPage from '../components/pages/Login'
 import ProfilePage from '../components/pages/Profile'
 import RegisterPage from '../components/pages/Register'
-import { Components } from 'antd/lib/date-picker/generatePicker'
+
 
 
 const components = {
@@ -28,7 +28,7 @@ export default {
     guest: {
         allowedRoutes: [
             components.login,
-            Components.register
+            components.register
         ],
         redirectRoutes: "/login"
     },

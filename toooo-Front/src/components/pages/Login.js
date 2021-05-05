@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, Row, Col, Divider } from 'antd';
 import Title from 'antd/lib/typography/Title';
+import axios from '../../config/axios';
 
 const layout = {
     labelCol: { xs: 24, sm: 5, md: 4, lg: 5, xl: 4, xxl: 3 },
@@ -11,6 +12,13 @@ export default function Login() {
 
     const onFinish = values => {
         console.log('Success:', values);
+        const body = {
+            username: values.username,
+            password: values.password,
+            
+    };
+        axios.post("/users/login" , body)
+        
     };
 
     return (

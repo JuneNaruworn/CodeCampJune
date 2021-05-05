@@ -18,12 +18,11 @@ function PrivateRoutes(props) {
                 key={route.url}
                 exact
                 >
-                    <route.component setRole={props.setRole}/>
-                </Route>
+            <route.component setRole={props.setRole}/>
+        </Route>
             ))}
           <Redirect to={redirectRoutes} />
         </Switch>
     );
 };
-
 export default PrivateRoutes;
