@@ -35,7 +35,6 @@ export default {
     user: {
         allowedRoutes: [
             components.todo,
-            components.login,
             components.profile
         ],
         redirectRoutes: "/profile"
