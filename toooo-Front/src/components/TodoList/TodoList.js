@@ -32,9 +32,11 @@ export default function TodoList() {
     return (
         <Row justify="center" style={{margin: "50px"}}>
             <Col>
+            <Link to="/Profile"><Button> Profile </Button></Link>
+                <br></br>
+                <br></br>
                 <Row>
-                <Link to="/Profile"><Button> Profile </Button></Link><br></br>
-
+               
                     <Text type="primary">กรุณาใส่ Todo ที่ต้องการเพิ่ม</Text>
                 </Row>
                 <Row justify="center">
