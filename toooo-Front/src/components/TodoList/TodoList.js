@@ -12,6 +12,7 @@ export default function TodoList() {
 
     const fetchTodoList = async () => {
         const httpResponse = await axios.get("/todo-list");
+        console.log(httpResponse.data)
         setTodoList(httpResponse.data);
     };
 

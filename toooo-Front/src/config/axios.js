@@ -6,18 +6,19 @@ axios.defaults.baseURL = "http://localhost:8000";
 axios.interceptors.request.use(
     config => {
 
-        if(config.url.includes("/login") || config.url.includes("/register")) return config;
+        if (config.url.includes("/login") || config.url.includes("/register")) return config;
 
         const token = localStorageService.getToken();
+        console.log("token:>>>", token)
 
-        if(token){
-            config.headers["Autorization"] =`Bearer ${token}`;
-    }
+        if (token) {
+            config.headers["Authorization"] = `Bearer ${token}`;
+        }
         return config;
-    
+
     },
     err => {
-        Promise.reject(err);
+        return Promise.reject(err);
     }
 );
 
