@@ -17,9 +17,9 @@ export default function Profile(props) {
                 Profile Page
             </h2>
             <p>
-                <strong>Name:</strong> Sonter
+                <strong>Name:</strong> ................
                 <br />
-                <strong>User ID:</strong> 15
+                <strong>User ID:</strong> ...................
             </p>
             <Link to="/todo"><Button> Go To TODO LIST</Button></Link>
             <Button onClick={logout}> Logout</Button>
