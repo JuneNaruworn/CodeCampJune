@@ -37,7 +37,7 @@ export default function Todo(props) {
                     </Row>
                 </Col>
                 <Col span={4}>
-                    <Button style={{ backgroundColor: 'orange' }} onClick={() => toggleEdit()}>Edit</Button>
+                    <Button style={{ backgroundColor: 'grey' }} onClick={() => toggleEdit()}>Edit</Button>
                 </Col>
                 <Col span={4}>
                     <Button type="danger" onClick={() => props.delete(props.todo.id)}>Delete</Button>

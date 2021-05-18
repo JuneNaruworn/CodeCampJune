@@ -1,9 +1,14 @@
-import React from 'react';
-import {Button} from 'antd';
+import React, { useEffect, useState } from 'react';
+import {  Button, Row  } from 'antd';
 import localStorageService from '../../services/localStorageService';
 import { Link } from 'react-router-dom';
+import  jwtDecode from 'jwt-decode';
+
 
 export default function Profile(props) {
+
+    const [name, setName] = useState("");
+    const [id, setId] = useState(0);
 
     const logout = () => {
         localStorageService.removeToken();
@@ -11,18 +16,29 @@ export default function Profile(props) {
 
     };
 
+    useEffect(() => {
+       const token = localStorageService.getToken();
+       if(token){
+           const user =jwtDecode(token);
+           setName(user.name);
+           setId(user.id);
+       }
+    }, []);
+
     return (
-        <div>
-            <h2>
+        <Row justify="center">
+            <div>
+            <h2 >
                 Profile Page
             </h2>
             <p>
-                <strong>Name:</strong> ................
+                <strong>Name:</strong> {name}
                 <br />
-                <strong>User ID:</strong> ...................
+                <strong>User ID:</strong> {id}
             </p>
-            <Link to="/todo"><Button> Go To TODO LIST</Button></Link>
+            <Link to="/todo"><Button> IDEA </Button></Link>
             <Button onClick={logout}> Logout</Button>
         </div>
+        </Row>
     );
 }

@@ -38,7 +38,7 @@ export default function TodoList() {
                 <br></br>
                 <Row>
                
-                    <Text type="primary">กรุณาใส่ Todo ที่ต้องการเพิ่ม</Text>
+                    <Text type="primary">กรุณาใส่ หัวข้อ IDEA</Text>
                 </Row>
                 <Row justify="center">
                     <Col span={20}>
@@ -52,7 +52,7 @@ export default function TodoList() {
                 <Row justify="center">
                     <List
                         style={{ width: '450px' }}
-                        header={<div>Todo List Page</div>}
+                        header={<div>IDEA List Page</div>}
                         bordered
                         dataSource={todoList}
                         renderItem={todo => (
