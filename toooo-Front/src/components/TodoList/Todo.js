@@ -23,7 +23,7 @@ export default function Todo(props) {
                 <Input value={changeInput} onChange={(e) => setChangeInput(e.target.value)} />
             </Col>
             <Col span={4}>
-                <Button type="primary" onClick={() => updateTodoItem(props.todo.id)}>Done</Button>
+                <Button style={{ backgroundColor: 'grey' }} onClick={() => updateTodoItem(props.todo.id)}>Done</Button>
             </Col>
         </Row>
     );
@@ -31,17 +31,16 @@ export default function Todo(props) {
     if (!isEdit) {
         contents = (
             <Row style={{ width: '100%' }}>
-                <Col span={16}>
+                <Col span={20}>
                     <Row justify="start">
                         {props.todo.task}
                     </Row>
                 </Col>
                 <Col span={4}>
-                    <Button style={{ backgroundColor: 'grey' }} onClick={() => toggleEdit()}>Edit</Button>
+                    <Button style={{ backgroundColor: 'grey' }} onClick={() => toggleEdit()}>แก้</Button>
+                    <Button type="danger" onClick={() => props.delete(props.todo.id)}>ลบ</Button>
                 </Col>
-                <Col span={4}>
-                    <Button type="danger" onClick={() => props.delete(props.todo.id)}>Delete</Button>
-                </Col>
+                
             </Row>
         );
     }

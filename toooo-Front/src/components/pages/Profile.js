@@ -36,8 +36,8 @@ export default function Profile(props) {
                 <br />
                 <strong>User ID:</strong> {id}
             </p>
-            <Link to="/todo"><Button> IDEA </Button></Link>
-            <Button onClick={logout}> Logout</Button>
+            <Link to="/todo"><Button style={{ width: '100%' },{ backgroundColor: 'grey' }}> IDEA </Button></Link>
+            <Button type="danger" onClick={logout}> Logout</Button>
         </div>
         </Row>
     );

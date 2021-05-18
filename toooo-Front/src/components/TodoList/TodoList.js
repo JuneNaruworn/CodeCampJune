@@ -33,7 +33,7 @@ export default function TodoList() {
     return (
         <Row justify="center" style={{margin: "50px"}}>
             <Col>
-            <Link to="/Profile"><Button> Profile </Button></Link>
+            <Link to="/Profile"><Button style={{ width: '100%' },{ backgroundColor: 'grey' }}> Profile </Button></Link>
                 <br></br>
                 <br></br>
                 <Row>
@@ -45,13 +45,14 @@ export default function TodoList() {
                         <Input value={inputField} onChange={(e) => setInputField(e.target.value)} />
                     </Col>
                     <Col span={4}>
-                        <Button style={{ width: '100%' }} onClick={addTodoItem}>Add</Button>
+                        <Button style={{ width: '100%' },{ backgroundColor: 'grey' }} onClick={addTodoItem}>Add</Button>
                     </Col>
                 </Row>
                 <Divider />
-                <Row justify="center">
+                <Row justify="center"  >
                     <List
-                        style={{ width: '450px' }}
+                        
+                        style={{ width: '550px' } }
                         header={<div>IDEA List Page</div>}
                         bordered
                         dataSource={todoList}
