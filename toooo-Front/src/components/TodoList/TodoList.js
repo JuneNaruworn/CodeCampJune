@@ -23,6 +23,7 @@ export default function TodoList() {
     const addTodoItem = async () => {
         await axios.post("/todo-list", { task: inputField });
         fetchTodoList();
+        setInputField("");
     };
 
     const deleteTodoItem = async (id) => {

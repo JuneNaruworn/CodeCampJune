@@ -33,6 +33,8 @@ export default function Login(props) {
             });
     };
 
+   
+
     return (
         <Row justify="center">
             <Col xs={23} sm={23} md={23} lg={14} xl={14} xxl={12}>
