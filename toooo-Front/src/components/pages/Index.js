@@ -1,10 +1,10 @@
 import React from 'react'
-import TodoList from '../TodoList/TodoList'
+import IDEAList from '../ListIDEA/IDEAList'
 
 export default function Index() {
     return (
         <div>
-            <TodoList />
+            <IDEAList />
         </div>
     )
 }

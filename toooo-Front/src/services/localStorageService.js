@@ -14,9 +14,11 @@ function getRole() {
     return "guest"
 }
 
+
 export default {
     setToken,
     getToken,
     removeToken,
     getRole,
+    
 };

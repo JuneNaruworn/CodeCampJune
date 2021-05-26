@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { Button, Row, Col, Input } from 'antd';
 import axios from 'axios';
 
-export default function Todo(props) {
+export default function IDEA(props) {
     const [changeInput, setChangeInput] = useState("");
     const [isEdit, setIsEdit] = useState(false);
 
-    const updateTodoItem = async (id) => {
-        await axios.put(`/todo-list/${id}`, { task: changeInput });
+    const updateIDEAItem = async (id) => {
+        await axios.put(`/idealist/${id}`, { task: changeInput });
         props.fetchData();
         setIsEdit(false);
     };
 
     const toggleEdit = () => {
-        setChangeInput(props.todo.task);
+        setChangeInput(props.idea.task);
         setIsEdit(true);
     };
 
@@ -23,7 +23,7 @@ export default function Todo(props) {
                 <Input value={changeInput} onChange={(e) => setChangeInput(e.target.value)} />
             </Col>
             <Col span={4}>
-                <Button style={{ backgroundColor: 'grey' }} onClick={() => updateTodoItem(props.todo.id)}>Done</Button>
+                <Button style={{ backgroundColor: 'grey' }} onClick={() => updateIDEAItem(props.idea.id)}>Done</Button>
             </Col>
         </Row>
     );
@@ -33,14 +33,15 @@ export default function Todo(props) {
             <Row style={{ width: '100%' }}>
                 <Col span={20}>
                     <Row justify="start">
-                        {props.todo.task}
+                        {props.idea.task}
                     </Row>
                 </Col>
-                <Col span={4}>
-                    <Button style={{ backgroundColor: 'grey' }} onClick={() => toggleEdit()}>แก้</Button>
-                    <Button type="danger" onClick={() => props.delete(props.todo.id)}>ลบ</Button>
+                <Col span={2}>
+                    <Button variant="contained" onClick={() => toggleEdit()}>แก้</Button>
                 </Col>
-                
+                <Col span={2}>
+                    <Button type="danger" onClick={() => props.delete(props.idea.id)}>ลบ</Button>
+                </Col>
             </Row>
         );
     }

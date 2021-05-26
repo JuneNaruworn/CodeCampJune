@@ -1,15 +1,15 @@
-import TodoPage from '../components/pages/Index'
+import IDEAPage from '../components/pages/Index'
 import LoginPage from '../components/pages/Login'
 import ProfilePage from '../components/pages/Profile'
 import RegisterPage from '../components/pages/Register'
+import contactPage from '../components/pages/contact'
+import RankPage from '../components/pages/Rank'
+import AdminPage from '../components/pages/Admin'
 
 
 
 const components = {
-    todo: {
-        url: "/todo",
-        component: TodoPage
-    },
+    
     login: {
         url: "/login",
         component: LoginPage
@@ -21,24 +21,68 @@ const components = {
     register: { 
         url: "/register",
         component: RegisterPage
-    }
+    },
+    contact: { 
+        url: "/contact",
+        component: contactPage
+    },
+    rank: { 
+        url: "/rank",
+        component: RankPage
+    },
+    idea: {
+        url: "/idea",
+        component: IDEAPage
+    },
+    admin: {
+        url: "/Admin",
+        component: AdminPage
+    },
+   
+   
+  
+   
+  
+    
 };
 // Role ไหนเข้าหน้าไหนได้บ้าง
 export default {
     guest: {
         allowedRoutes: [
             components.login,
-            components.register
+            components.register,
+            components.contact,
+           
+           
+            
         ],
         redirectRoutes: "/login"
     },
     user: {
         allowedRoutes: [
-            components.todo,
-            components.profile
+            components.idea,
+            components.profile,
+            components.contact,
+            components.rank,
+          
+            
         ],
         redirectRoutes: "/profile"
     },
+
+    admin: {
+        allowedRoutes: [
+            components.admin,
+            components.contact,
+            components.rank,
+              
+                
+        ],
+        redirectRoutes: "/admin"
+    },
+
+  
+
     
 
 };

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {  Button, Row  } from 'antd';
 import localStorageService from '../../services/localStorageService';
-import { Link } from 'react-router-dom';
 import  jwtDecode from 'jwt-decode';
+
+
 
 
 export default function Profile(props) {
@@ -24,6 +25,8 @@ export default function Profile(props) {
            setId(user.id);
        }
     }, []);
+    
+    
 
     return (
         <Row justify="center">
@@ -36,7 +39,7 @@ export default function Profile(props) {
                 <br />
                 <strong>User ID:</strong> {id}
             </p>
-            <Link to="/todo"><Button style={{ width: '100%' },{ backgroundColor: 'grey' }}> IDEA </Button></Link>
+            
             <Button type="danger" onClick={logout}> Logout</Button>
         </div>
         </Row>

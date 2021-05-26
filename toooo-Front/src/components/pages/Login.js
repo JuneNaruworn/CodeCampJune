@@ -6,6 +6,7 @@ import localStorageService from '../../services/localStorageService';
 import { Link } from 'react-router-dom';
 
 
+
 const layout = {
     labelCol: { xs: 24, sm: 5, md: 4, lg: 5, xl: 4, xxl: 3 },
     wrapperCol: { xs: 24, sm: 19, md: 20, lg: 19, xl: 20, xxl: 21 },
@@ -18,7 +19,7 @@ export default function Login(props) {
         const body = {
             username: values.username,
             password: values.password,
-    
+        
             
     };
         axios.post("/users/login" , body)
@@ -32,16 +33,15 @@ export default function Login(props) {
                 });
             });
     };
-
-   
-
+    
     return (
         <Row justify="center">
             <Col xs={23} sm={23} md={23} lg={14} xl={14} xxl={12}>
                 <div className="Form">
                     <Row justify="center">
+                    
                         <Title level={2} className="Title">
-                            Login
+                        Login
                     </Title>
                     </Row>
                     <Divider className="Divider" />
@@ -70,8 +70,13 @@ export default function Login(props) {
                         <Button className="Button" type="primary" htmlType="submit">
                             Submit
                         </Button>
-                        <Link to="/register"><Button> Register </Button></Link>
+                        <Link to ="/register">
+                        <Button className="Button" type="Grey" htmlType="register">
+                            Register
+                        </Button></Link>
+                        
                     </Form>
+                   
                     
                 </div>
             </Col>

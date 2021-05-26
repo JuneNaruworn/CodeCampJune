@@ -5,7 +5,7 @@
 .Form {
   border-radius: 5px;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
-  background-color: #b0f7c2;
+  background-color: #f2faf4;
   margin: 20px;
   padding: 20px;
 }
@@ -38,7 +38,7 @@
 }
 
 .App-header {
-  background-color: #9cf8c5;
+  background-color: #c1f1d7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
