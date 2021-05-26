@@ -4,7 +4,7 @@ import ProfilePage from '../components/pages/Profile'
 import RegisterPage from '../components/pages/Register'
 import contactPage from '../components/pages/contact'
 import RankPage from '../components/pages/Rank'
-import AdminPage from '../components/pages/Admin'
+
 
 
 
@@ -34,11 +34,7 @@ const components = {
         url: "/idea",
         component: IDEAPage
     },
-    admin: {
-        url: "/Admin",
-        component: AdminPage
-    },
-   
+  
    
   
    
@@ -70,17 +66,7 @@ export default {
         redirectRoutes: "/profile"
     },
 
-    admin: {
-        allowedRoutes: [
-            components.admin,
-            components.contact,
-            components.rank,
-              
-                
-        ],
-        redirectRoutes: "/admin"
-    },
-
+    
   
 
     
