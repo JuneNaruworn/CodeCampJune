@@ -15,7 +15,7 @@ export default function IDEAList() {
         console.log(httpResponse.data)
         setIDEAList(httpResponse.data);
     };
-    
+
     useEffect(() => {
         fetchIDEAList();
     }, []);
@@ -32,11 +32,6 @@ export default function IDEAList() {
         await axios.delete(`/idealist/${id}`);
         fetchIDEAList();
     };
-
-
-
-    
-     
 
     return (
         

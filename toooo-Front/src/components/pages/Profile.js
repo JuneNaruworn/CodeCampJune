@@ -10,7 +10,7 @@ export default function Profile(props) {
 
     const [name, setName] = useState("");
     const [id, setId] = useState(0);
-
+    
     const logout = () => {
         localStorageService.removeToken();
         props.setRole("guest");
@@ -23,6 +23,7 @@ export default function Profile(props) {
            const user =jwtDecode(token);
            setName(user.name);
            setId(user.id);
+         
        }
     }, []);
     

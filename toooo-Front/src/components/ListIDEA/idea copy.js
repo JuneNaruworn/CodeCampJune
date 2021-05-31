@@ -6,7 +6,6 @@ export default function IDEA(props) {
     const [changeInput, setChangeInput] = useState("");
     const [isEdit, setIsEdit] = useState(false);
 
- 
     const updateIDEAItem = async (id) => {
         await axios.put(`/idealist/${id}`, { task: changeInput });
         props.fetchData();
@@ -33,10 +32,8 @@ export default function IDEA(props) {
         contents = (
             <Row style={{ width: '100%' }}>
                 <Col span={18}>
-                <Col>{props.idea.task.id} </Col>
-               
-                <Row justify="start">
-                {props.idea.task}
+                    <Row justify="start">
+                        {props.idea.task}
                     </Row>
                 </Col>
                 <Col justify="center" span={3}>
