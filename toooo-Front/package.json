@@ -18,7 +18,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
+  "homepage": "https://JuneNaruworn.github.io/Personal-Project/",
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
